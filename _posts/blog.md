@@ -1,3 +1,13 @@
+---
+title: 'CPU experiment'
+date: 2199-01-01
+permalink: /posts/2012/08/CPU_experiment/
+tags:
+  - cool posts
+  - category1
+  - category2
+---
+
 # CPU実験振り返り
 
 レポートとソースコード一式は[このレポジトリ](https://github.com/BOYANGCHENutokyo/FPU_MEMORY.git)にあります。
