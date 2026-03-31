@@ -1,6 +1,6 @@
 ---
 title: 'CPU experiment'
-date: 2199-01-01
+date: 2026-03-31
 permalink: /posts/2012/08/CPU_experiment/
 tags:
   - cool posts
