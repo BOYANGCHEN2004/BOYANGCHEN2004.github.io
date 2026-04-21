@@ -24,13 +24,13 @@ repository               : "BOYANGCHEN2004/BOYANGCHEN2004.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "BOYANG CHEN"
   pronouns         : # example: "she/her"  
   bio              : "Short biography for the left-hand sidebar"
   location         : "Earth"
-  employer         : "Red Brick University"
+  employer         : "The University of Tokyo"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "chen-boyang00@g.ecc.u-tokyo.ac.jp" 
 
   # Academic websites
   academia         : # URL
