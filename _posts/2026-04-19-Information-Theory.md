@@ -1,17 +1,39 @@
-# 情報理論の基礎
+# Fundamentals of Information Theory
 
-## アルファベットと符号化
-どのような言語のデータでも、それを構成する基本単位となるものがある。例えば英語であれば、$a,b,c,\dots$という小文字（あるいは大文字）が基本であり、日本語であればひらがな、カタカナと漢字が基本である。計算機では英文文字に様々な制御記号を加えたASCII符号と呼ばれるものがよく使われる。そのような記号の集合を
+## Alphabet and Encoding
+For data in any language, there are fundamental units that compose it. For example, in English, lowercase letters (or uppercase letters) such as $a,b,c,\dots$ are basic units; in Japanese, hiragana, katakana, and kanji are basic units. In computers, what is commonly used is the ASCII code, which adds various control symbols to English letters. Let such a set of symbols be represented by
 $$A=\{a_{1},a_{2},\dots,a_{\alpha}\}$$
-で代表させ、集合としての$A$をアルファベットと呼ぶことができる。アルファベットとは一つの集合であり、集合$A$に含まれる個々の要素をアルファベットと呼ぶことはしない。アルファベットAの要素を記号、Aに含まれる記号の総数$\alpha = |A|$をアルファベットの大きさという。
+Then we can call the set $A$ an alphabet. An alphabet is a set; we do not call each individual element in $A$ an alphabet. The elements of alphabet $A$ are called symbols, and the total number of symbols in $A$, $\alpha = |A|$, is called the size of the alphabet.
 
-## 体
-集合（有理数の集合$\mathbb{Q}$や実数の集合$\mathbb{R}$など）とその上に定義された演算との組を代数系という。体は代数系の一つであり、次のように定義されている：
+Examples of alphabets include $\{\text{White},\text{ black}\}, \{\text{True}, \text{ False}\}, \{W, E, N, S\}$. However, for example, $\{White,black\}$ and $\{True, False\}$ are both essentially the same in the sense that they are alphabets of size 2; what differs is only their interpretation.
 
-$K$が体(field)であるとは、$K$に加法と乗法が定義されて、次の条件を満たされていることである。
-1. $K$の任意の元$a,b,c$について、$(a+b)+c=a+(b+c)$が成り立つ　(加法に関する結合則)
-2. $K$の元$0$で、$K$の任意の元$a$に対し、$a+0=0+a=a$を満たすものがただ一つ存在する（零元）
-3. $K$の任意の元$a$に対し、$a+b=b+a=0$を満たす$K$の元$b$がただ一つ存在する
+In information theory, it is normal to represent alphabet of size 2 using $\{0,1\}$, and seperate the interpretation from the alphabet itself. We call $\{0,1\}$ binary alphabet, and call the data on that binary sequence or **binary data**.
+When we have a alphabet A, we call the set consist of symbol sequence 
+## Channel Encoding
+### Hammming distance
+the **Hamming distance** between two binary strings $\mathbf{x}, \mathbf{y}$ 
+
+$$
+\begin{align*}
+\mathbf{x} &= x_1 x_2 \dots x_n \text{, where } x_i \in \{0,1\} \:\: i \in \{1,2,\dots,n\} \\
+\mathbf{y} &= y_1 y_2 \dots y_n \text{, where } y_i \in \{0,1\} \:\: i \in \{1,2,\dots,n\} 
+\end{align*}
+$$
+can be defined as follows:
+
+$$
+d_{Hamming}(\mathbf{x}, \mathbf{y}) = \sum^{n}_{i=1}\delta(x_{i}, y_{i}) \text{, where } \delta(x_{i},y_{i}) = \begin{cases} 0 & (x_{i} = y_{i}) \\ 1 & (x_{i} \ne y_{i}) \end{cases}
+$$
+### Hamming code
+0 & (x \le 0) \end{cases}
+$$
+## Field
+A set (such as the set of rational numbers $\mathbb{Q}$ or the set of real numbers $\mathbb{R}$) together with operations defined on it is called an algebraic structure. A field is one kind of algebraic structure and is defined as follows:
+
+For $K$ to be a field, addition and multiplication must be defined on $K$, and the following conditions must be satisfied:
+1. For any elements $a,b,c$ in $K$, $(a+b)+c=a+(b+c)$ holds (associative law for addition).
+2. There exists exactly one element $0$ in $K$ such that for any element $a$ in $K$, $a+0=0+a=a$ (additive identity).
+3. For any element $a$ in $K$, there exists exactly one element $b$ in $K$ such that $a+b=b+a=0$.
 4. 
 5. 
 6. 
