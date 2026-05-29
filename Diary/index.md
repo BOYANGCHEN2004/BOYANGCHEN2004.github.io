@@ -9,4 +9,4 @@ author_profile: false
 
 Personal diary organized into subdirectories.
 
-- [English](/diary/english/)
+- [English](/diary/English/)

@@ -8,6 +8,7 @@ title: "statistical ML"
 ### Covariance: 
 
 Covariance provides a measure of the strength of the correlation between two or more sets of random variates. The covariance for two random variates X and Y, each with sample size N, is defined by the expectation value
+
 {% raw %}
 $$
 \begin{align*}
@@ -17,12 +18,14 @@ cov(X,Y)\t =\t \langle (X-\mu_X)(Y-\mu_{Y}) \rangle\t
 $$
 {% endraw %}
 where $\mu_x=\langle X \rangle$ and $\mu_y=\langle Y \rangle$ are the respective means, which can be written out explicitly as
+
 {% raw %}
 $$
  cov(X,Y)=\sum_{i=1}^N \frac{(x_i-\bar{x})(y_i-\bar{y})}{N}. 
 $$
 {% endraw %}
 For uncorrelated variates,
+
 {% raw %}
 $$
  cov(X,Y)=\langle XY \rangle-\mu_X\mu_Y=\langle X \rangle\langle Y \rangle-\mu_X\mu_Y=0, 
@@ -30,6 +33,7 @@ $$
 {% endraw %}
 
 When the dimension of the random variate is greater than one, the random variable vector can be represented as $X = (X_1, X_2, \ldots, X_d)^T$, and $Y = (Y_1, Y_2, \ldots, Y_d)^T$ the covariance is represented by a covariance matrix $\Sigma$, which is defined as
+
 {% raw %}
 $$
 \begin{align*}
@@ -51,11 +55,15 @@ $$
 where $a$ is the height of the curve's peak, $b$ is is the horizontal position of the center of the peak, and $c$ (the standard deviation, sometimes called the Gaussian RMS width) controls the width of the "bell".
 When we set $a = \frac{1}{\sqrt{2\pi}\sigma}$ and $b = \mu$,  the Gaussian function becomes a probability density function of the normal distribution with mean $\mu$ and standard deviation $\sigma$, which is given by
 $$
-{% endraw %}f(x) = \frac{1}{\sqrt{2\pi}\sigma} \\ \: \text{exp}\left(-\frac{(x-\mu)^2}{2\sigma^2}\right){% raw %}
+{% endraw %}
+
+f(x) = \frac{1}{\sqrt{2\pi}\sigma} \\ \: \text{exp}\left(-\frac{(x-\mu)^2}{2\sigma^2}\right){% raw %}
 $$
 and the multivariate Gaussian distribution is given by
 $$
-{% endraw %}f(x) = \frac{1}{(2\pi)^{d/2} |\Sigma|^{1/2}} \\ \: \text{exp}\left(-\frac{1}{2}(x-\mu)^T \Sigma^{-1} (x-\mu)\right){% raw %}
+{% endraw %}
+
+f(x) = \frac{1}{(2\pi)^{d/2} |\Sigma|^{1/2}} \\ \: \text{exp}\left(-\frac{1}{2}(x-\mu)^T \Sigma^{-1} (x-\mu)\right){% raw %}
 $$
 where $\Sigma$ is the covariance matrix of the distribution.
 ## Kullback-Leibler (KL) Divergence
@@ -66,6 +74,7 @@ Let $p(x)$ and $q(x)$ be two probability distributions of a  random variable $x$
 $$
 {% endraw %}
 D_{KL}(p(x) || q(x)) = \sum_{x \in X} p(x) \ln \frac{p(x)}{q(x)} \\ : (= \mathbb{E}_{p(x)}[\ln \frac{p(x)}{q(x)}])
+
 {% raw %}
 $$
 when $x$ is discrete, and as:

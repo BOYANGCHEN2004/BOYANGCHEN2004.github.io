@@ -17,7 +17,9 @@ Examples of finite-dimensional Hilbert spaces include
 2. The complex numbers $\mathbb{C}^n$ with $\langle v,u\rangle$ the vector dot product of $v$ and the complex conjugate of $u$.
 An example of an infinite-dimensional Hilbert space is $L^2$, the set of all functions $f:\mathbb{R} \rightarrow \mathbb{R}$ such that the integral of $f^2$ over the whole real line is finite. In this case, the inner product is
 $$
-{% endraw %}\langle f,g \rangle=\int_{-\infty}^{\infty}f(x)g(x)dx {% raw %}
+{% endraw %}
+
+\langle f,g \rangle=\int_{-\infty}^{\infty}f(x)g(x)dx {% raw %}
 $$
 A Hilbert space is always a Banach space, but the converse need not hold.
 ## Projection Operators

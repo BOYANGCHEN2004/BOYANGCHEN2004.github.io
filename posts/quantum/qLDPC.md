@@ -19,6 +19,7 @@ The "Tanner Graph" is the mathematical concept that bridges Check Matrix and BP 
 2. Translating $H$ into the Decoding Graph ($G$): 
 Algorithms like Belief Propagation don't like looking at grids of numbers. They prefer to look at networks (graphs) where information can flow. The sentence you quoted is simply the instruction manual for drawing that network based on the matrix $H$.Because $H$ has rows and columns, the graph $G$ will have two distinct types of nodes (making it a "bipartite" graph):Error Nodes (Circles): For every column in $H$, we draw an Error Node. These represent the unknown errors we are trying to find.Check Nodes (Squares): For every row in $H$, we draw a Check Node. These hold the "syndrome" data—the actual measurement results we got from the quantum computer.The Edges (Lines): We draw a line connecting a Check Node to an Error Node only if there is a $1$ in the matrix at that row and column intersection.
 * An Example: Let's look at a very simple error correction setup with 4 qubits (4 possible errors, $e_1$ to $e_4$) and 2 measurements (2 checks, $c_1$ and $c_2$).Our rulebook matrix $H$ looks like this:
+
 {% raw %}
 $$
 H = \begin{bmatrix} 1 & 1 & 1 & 0 \\ 0 & 1 & 1 & 1 \end{bmatrix}

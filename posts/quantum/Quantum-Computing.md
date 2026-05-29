@@ -5,6 +5,7 @@ title: "Quantum Computing"
 # Quantum Computing
 
 ## Basic gates:
+
 {% raw %}
 $$
 \begin{aligned}
@@ -18,8 +19,10 @@ $$
 {% endraw %}
 
 ## Basic States
-- Bell State: $\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$
+- Bell State: $\frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)$
 - GHZ State: $\frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)$
+
+
 ## Stabilizer Code
 
 ### Qubit encoding

@@ -10,8 +10,12 @@ $$f(x) = a_0 + \sum_{n=1}^{\infty} \left( a_n \cos\left(\frac{n\pi x}{L}\right) 
 $$
 where the coefficients $a_n$ and $b_n$ are calculated as follows:
 $$
-{% endraw %}a_0 = \frac{1}{2L} \int_{-L}^{L} f(x) \, dx{% raw %}
+{% endraw %}
+
+a_0 = \frac{1}{2L} \int_{-L}^{L} f(x) \, dx{% raw %}
 $$
 $$a_n = \frac{1}{L} \int_{-L}^{L} f(x) \cos\left(\frac{n\pi x}{L}\right) \, dx$$
 $$
-{% endraw %}b_n = \frac{1}{L} \int_{-L}^{L} f(x) \sin\left(\frac{n\pi x}{L}\right) \, dx$$
+{% endraw %}
+
+b_n = \frac{1}{L} \int_{-L}^{L} f(x) \sin\left(\frac{n\pi x}{L}\right) \, dx$$

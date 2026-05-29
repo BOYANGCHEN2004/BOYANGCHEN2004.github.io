@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bezier Curves and Surfaces - Interactive</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #canvas {
+      flex: 1;
+      display: block;
+      background: #0a0e27;
+      cursor: crosshair;
+    }
+
+    .control-panel {
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 20px;
+      border-top: 2px solid #4a90e2;
+      font-size: 14px;
+    }
+
+    .control-group {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .control-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    label {
+      font-weight: 600;
+      min-width: 150px;
+    }
+
+    input[type="range"] {
+      width: 200px;
+      cursor: pointer;
+    }
+
+    select {
+      padding: 8px 12px;
+      background: #1e3c72;
+      color: white;
+      border: 2px solid #4a90e2;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    select:hover {
+      background: #2a5298;
+    }
+
+    select option {
+      background: #1e3c72;
+      color: white;
+    }
+
+    button {
+      padding: 8px 16px;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #357abd;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+
+    .info-display {
+      background: rgba(0, 0, 0, 0.6);
+      color: #4a90e2;
+      padding: 10px 15px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+    }
+
+    .equation-display {
+      max-width: 640px;
+      white-space: normal;
+      line-height: 1.4;
+    }
+
+    .value-display {
+      display: inline-block;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+
+    .coordinates {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+      margin-top: 15px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 15px;
+      border-radius: 4px;
+      border-left: 3px solid #4a90e2;
+    }
+
+    .coord-item {
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .coord-label {
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 3px;
+    }
+
+    .coord-value {
+      color: #4a90e2;
+      font-family: 'Courier New', monospace;
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 24px;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      z-index: 10;
+    }
+
+    .instructions {
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      color: #ccc;
+      font-size: 12px;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <h1>Bezier Curve</h1>
+
+  <div class="instructions">
+    <div>🖱️ Drag: move control points</div>
+    <div>🖱️ Drag (empty space): rotate surface</div>
+    <div>🖱️ Wheel: adjust selected point height (surface)</div>
+    <div>🔄 Double-click: reset</div>
+  </div>
+
+  <div class="control-panel">
+    <div class="control-group">
+      <div class="control-item">
+        <label for="curveTypeSelect">Shape type:</label>
+        <select id="curveTypeSelect">
+          <option value="bezier-curve">Bezier curve</option>
+          <option value="hermite-curve">Hermite curve</option>
+          <option value="bezier-surface">Cubic Bezier surface</option>
+          <option value="coons-surface">Coons surface</option>
+          <option value="temple-of-heaven">Temple of Heaven</option>
+        </select>
+        <div class="info-display" id="curveTypeInfo">
+          Bezier curve
+        </div>
+      </div>
+
+      <div class="control-item">
+        <label for="degreeSelect">Curve degree:</label>
+        <select id="degreeSelect">
+          <option value="2">Degree 2</option>
+          <option value="3">Degree 3</option>
+          <option value="4">Degree 4</option>
+          <option value="5">Degree 5</option>
+        </select>
+        <div class="info-display" id="degreeInfo">
+          Degree 2 (control points: 3)
+        </div>
+      </div>
+
+      <div class="control-item">
+        <label for="resolution">Resolution:</label>
+        <input type="range" id="resolution" min="50" max="500" value="200" step="10">
+        <div class="info-display">
+          Segments: <span class="value-display" id="resolutionValue">200</span>
+        </div>
+      </div>
+
+      <div class="control-item">
+        <button id="resetBtn">↻ Reset</button>
+      </div>
+
+      <div class="control-item">
+        <button id="animateBtn">▶ Animate</button>
+      </div>
+    </div>
+
+    <div class="control-group" id="curveEquationGroup">
+      <div class="control-item">
+        <label for="equationDisplay">Equation y = f(x):</label>
+        <div class="info-display equation-display" id="equationDisplay">y = 0</div>
+      </div>
+      <div class="control-item">
+        <label for="tValueDisplay">Animation t:</label>
+        <div class="info-display" id="tValueDisplay">t = 0.000</div>
+      </div>
+    </div>
+
+    <div class="coordinates" id="bezierCoordinates">
+      <div class="coord-item">
+        <div class="coord-label">P0 (1st) 🔴</div>
+        <div class="coord-value" id="p0Display">x: 0, y: 0</div>
+      </div>
+      <div class="coord-item">
+        <div class="coord-label">P1 (2nd) 🟢</div>
+        <div class="coord-value" id="p1Display">x: 0, y: 0</div>
+      </div>
+      <div class="coord-item">
+        <div class="coord-label">P2 (3rd) 🔵</div>
+        <div class="coord-value" id="p2Display">x: 0, y: 0</div>
+      </div>
+      <div class="coord-item">
+        <div class="coord-label">P3 (4th) 🟠</div>
+        <div class="coord-value" id="p3Display">x: 0, y: 0</div>
+      </div>
+      <div class="coord-item">
+        <div class="coord-label">P4 (5th) 🟣</div>
+        <div class="coord-value" id="p4Display">x: 0, y: 0</div>
+      </div>
+      <div class="coord-item">
+        <div class="coord-label">P5 (6th) 🔴</div>
+        <div class="coord-value" id="p5Display">x: 0, y: 0</div>
+      </div>
+    </div>
+
+    <div class="coordinates" id="hermiteCoordinates" style="display: none;">
+      <div class="coord-item">
+        <div class="coord-label">P0 (start) 🔴</div>
+        <div class="coord-value" id="hermiteP0Display">x: 0, y: 0</div>
+      </div>
+      <div class="coord-item">
+        <div class="coord-label">P1 (end) 🔵</div>
+        <div class="coord-value" id="hermiteP1Display">x: 0, y: 0</div>
+      </div>
+      <div class="coord-item">
+        <div class="coord-label">T0 (start tangent) ➡️</div>
+        <div class="coord-value" id="hermiteT0Display">x: 0, y: 0</div>
+      </div>
+      <div class="coord-item">
+        <div class="coord-label">T1 (end tangent) ➡️</div>
+        <div class="coord-value" id="hermiteT1Display">x: 0, y: 0</div>
+      </div>
+    </div>
+
+    <div class="coordinates" id="surfaceCoordinates" style="display: none;">
+      <div class="coord-item">
+        <div class="coord-label">Selected control point</div>
+        <div class="coord-value" id="surfacePointDisplay">None</div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="src/index.js"></script>
+</body>
+</html>
+</body>
+</html>

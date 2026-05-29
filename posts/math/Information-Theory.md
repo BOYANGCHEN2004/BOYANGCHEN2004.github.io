@@ -22,12 +22,14 @@ $$
 \mathbf{x} &= x_1 x_2 \dots x_n \text{, where } x_i \in \{0,1\} \:\: i \in \{1,2,\dots,n\} \\
 \mathbf{y} &= y_1 y_2 \dots y_n \text{, where } y_i \in \{0,1\} \:\: i \in \{1,2,\dots,n\} 
 \end{align*}
+
 {% raw %}
 $$
 can be defined as follows:
 $$
 {% endraw %}
 d_{Hamming}(\mathbf{x}, \mathbf{y}) = \sum^{n}_{i=1}\delta(x_{i}, y_{i}) \text{, where } \delta(x_{i},y_{i}) = \begin{cases} 0 & (x_{i} = y_{i}) \\ 1 & (x_{i} \ne y_{i}) \end{cases}
+
 {% raw %}
 $$
 This $\delta$ function is actually $\texttt{XOR}$, which will be discuss later.

@@ -31,7 +31,9 @@ This tree can be expressed as $a \\: c \\:(b \\: c)$
 ## HORS
 * 型:
 $$
-{% endraw %}\\kappa ::= o \text{ (木の型) }| \\: \\kappa_{1} \\rightarrow \\kappa_{2} \text{ (関数型) }$$
+{% endraw %}
+
+\\kappa ::= o \text{ (木の型) }| \\: \\kappa_{1} \\rightarrow \\kappa_{2} \text{ (関数型) }$$
 * 型のオーダーとarity
     - order $(o) = 0$
     - order $(\\kappa_{1} \\rightarrow \\kappa_{2}) = \\text{max}(\\text{order}(\\kappa_{1})+1, \\text{order}(\\kappa_{2}))$ (つまり、 order $(\\kappa_{1} \\rightarrow \\dots \\rightarrow \\kappa_{n} \\rightarrow o)$=1+max(order(\\kappa1),..., order(\\kappan)) )
