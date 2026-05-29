@@ -34,6 +34,40 @@ $$\kappa ::= o \text{ (木の型) }| \: \kappa_{1} \rightarrow \kappa_{2} \text{
     
 * $G=(\Sigma, N, R, S^{0})$のオーダー: $N$中の非終端記号の型のオーダーの最大値
 
+## Bottom-up finite tree automaton
+A bottom-up finite tree automaton over $\Sigma$ is defined as a tuple $(Q, \Sigma, F, \Delta)$, where 
+- $\Sigma$: ranked alphabet (i.e., an alphabet whose symbols have an associated arity)
+- $Q$: a finite set of states
+- $\Delta$: a set of transition rules of the form $f(q_{1}(x_{1}),\dots,q_{n}(x_{n})) \rightarrow q(f(x_{1},\dots,x_{n}))$
+- $F$: a set of final states
+
+### Example:
+- $\Sigma = \{a/2,b/1,e/0\}$
+- $ Q = \{\text{even}, \text{odd}\}$
+- $ \Delta = \{a(\text{odd}, \text{even}) \rightarrow \text{even}, a(\text{even}, \text{odd}) \rightarrow \text{even}, a(\text{even}, \text{even}) \rightarrow \text{odd}, a(\text{odd}, \text{odd}) \rightarrow \text{odd}, b(\text{even}) \rightarrow \text{even}, b(\text{odd}) \rightarrow \text{odd}, e() \rightarrow \text{even}\}$
+- $F = \{\text{even}\}$
+
+The transition rule set $\Delta$ can also be denoted as following:
+- $\Delta = \{\text{odd}, \text{even} \rightarrow_{a} \text{even}, \text{even}, \text{odd} \rightarrow_{a} \text{even}, \text{even}, \text{even} \rightarrow_{a} \text{odd}, \text{odd}, \text{odd} \rightarrow_{a} \text{odd}, \text{even} \rightarrow_{b} \text{even}, \text{odd} \rightarrow_{b} \text{odd},  \rightarrow_{e} \text{even}\}$
+
+![Alt text](../images/Language-Processing/tree_automaton.png)
+
+
+
+
+## Top-down finite tree automaton
+A top-down finite tree automaton over $F$ is defined as a tuple $(\Sigma, Q, \Delta, F)$ where:
+- $\Sigma$: ranked alphabet (i.e., an alphabet whose symbols have an associated arity)
+- $Q$: a finite set of states
+- $\Delta$: a set of transition rules of the form f(q1(x1),...,qn(xn)) → q(f(x1,...,xn)),
+- $F$: a set of final states
+
+with two differences with bottom-up tree automata. First, Qi ⊆ Q, the set of its initial states, replaces Qf; second, its transition rules are oriented conversely: q(f(x1,...,xn)) → f(q1(x1),...,qn(xn)), for an n-ary f ∈ F, q, qi ∈ Q, and xi variables denoting subtrees. That is, members of Δ are here rewrite rules from nodes whose roots are states to nodes whose children's roots are states. A top-down automaton starts in some of its initial states at the root and moves downward along branches of the tree, associating along a run a state with each subterm inductively. A tree is accepted if every branch can be gone through this way.[2]
+
+
+## Deterministic Finite Tree Automata
+- Top Down Tree automaton is deterministic $\Leftrightarrow$ For each $q,a$, there exists at most 1 rule $q \rightarrow_{a} q_{1} \dots q_{\text{arity}(a)}$.
+
 ## Parity Tree Automaton
 A Parity tree automaton over $\Sigma$ is $A = (S, s_{0}, T, p)$, where 
 - $S$ is a finite set of states
