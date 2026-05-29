@@ -1,3 +1,7 @@
+---
+title: "Computer Simulations in Science"
+---
+
 ## Terminology
 
 
@@ -8,7 +12,6 @@
 
 * 性能パラメータ: "B/F値" Byte/Flop
 $$\frac{\text{メモリバンド幅(Bytes/s)}}{\text{浮動小数演算能力(Flops/s)}}$$
-
 ### Poisson's Equation
 The following equation is called Poisson's equation:
  $$ 
@@ -32,7 +35,7 @@ $$
 対策3のための工夫の一つ: Linux Kernel + 軽量Kernelで同居。軽量KernelでできないことはLinux Kernelに投げる。（e.g. 富岳McKernel）
 
 ### ネットワークの低水準API（MPIはこの上）
-ソケット $\times$ レイテンシ大
+ソケット $\\times$ レイテンシ大
 
 HPC用InfiniBand verbs他、Remote direct memory accessを使える
 
@@ -40,9 +43,9 @@ HPC用InfiniBand verbs他、Remote direct memory accessを使える
 Eager通信とRendezvous（ランデブー）通信
 - Eager通信：送信側は受信の完了を待たない。バッファにメッセージが入るほど小さい
     - 良：レイテンシが短い
-    - 悪：バッファへのコピーが必要 $\rightarrow$ 実効バンド幅が低い
+    - 悪：バッファへのコピーが必要 $\\rightarrow$ 実効バンド幅が低い
     - 短いメッセージ向け
 - Rendzvous：最初に送受信の合意をとる、合意したら転送
 
-### 計算科学のアプリ $\rightarrow$ 速いアプリを作る工夫
-* 個別コアのレベル: 演算器の利用効率 $\rightarrow$ データがなければ進まない $\rightarrow$ B/F値が小さい（レイテンシも数百サイクル）
+### 計算科学のアプリ $\\rightarrow$ 速いアプリを作る工夫
+* 個別コアのレベル: 演算器の利用効率 $\\rightarrow$ データがなければ進まない $\\rightarrow$ B/F値が小さい（レイテンシも数百サイクル）

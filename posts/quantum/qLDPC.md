@@ -1,3 +1,7 @@
+---
+title: "qLDPC"
+---
+
 # qLDPC (quantum Low Density Parity Check)
 
 ## LDPC?
