@@ -5,6 +5,7 @@ title: "Quantum Computing"
 # Quantum Computing
 
 ## Basic gates:
+{% raw %}
 $$
 \begin{aligned}
 X &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \quad , \quad Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \quad , \quad Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \quad , \quad H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \quad , \\
@@ -14,6 +15,7 @@ Ry(\theta) &= \text{exp}\left(-i\frac{\theta}{2} \sigma_y\right) = \begin{pmatri
 Rz(\phi) &= \text{exp}\left(-i\frac{\phi}{2} \sigma_z\right) = \begin{pmatrix} e^{-i\phi/2} & 0 \\ 0 & e^{i\phi/2} \end{pmatrix}
 \end{aligned}
 $$
+{% endraw %}
 
 ## Basic States
 - Bell State: $\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)$
@@ -25,24 +27,30 @@ The rationale of encoding one abstract or logical qubit into a set of many on-de
 $|\bar{0} \rangle$ (“logical 0”) and $|\bar{1} \rangle$
  ("logical 1") are encoded into three physical qubits via
 
+{% raw %}
 $$
 |\bar{0} \rangle \rightarrow |000 \rangle, \quad |\bar{1} \rangle \rightarrow |111 \rangle
 $$
+{% endraw %}
 
 
 A general qubit $|\psi \rangle \alpha |0 \rangle + \beta |1 \rangle$ is then encoded as
 
+{% raw %}
 $$
 |\psi \rangle =  \alpha |0 \rangle + \beta |1 \rangle \rightarrow \alpha |000 \rangle + \beta |111 \rangle = \alpha |\bar{0} \rangle + \beta |\bar{1} \rangle = |\bar{\psi} \rangle
 $$
+{% endraw %}
 
 ### Error detection
 We suppose that a bit-flip error occurs on the second qubit, meaning that the qubit is randomly flipped. This can be modelled as an unwanted Pauli-$X$
  operator being applied on $|\bar{\psi} \rangle$:
 
+{% raw %}
 $$
 X_{2}|\bar{\psi} \rangle = \alpha |010 \rangle + \beta |101 \rangle 
 $$
+{% endraw %}
 
 How do we detect this error? As we already know, measuring the state collapses it, so we cannot measure the state to detect the error.
 

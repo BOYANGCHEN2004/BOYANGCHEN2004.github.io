@@ -11,7 +11,8 @@ title: "Computer Simulations in Science"
         - コモディティ: Unbuffered
 
 * 性能パラメータ: "B/F値" Byte/Flop
-$$\frac{\text{メモリバンド幅(Bytes/s)}}{\text{浮動小数演算能力(Flops/s)}}$$
+$$\frac{\text{メモリバンド幅(Bytes/s)}}{\text{浮動小数演算能力(Flops/s)}}{% raw %}
+$$
 ### Poisson's Equation
 The following equation is called Poisson's equation:
  $$ 
@@ -19,6 +20,7 @@ The following equation is called Poisson's equation:
  $$
 The $\Delta$ operator is called Laplace operator and defined as follows:
 $$
+{% endraw %}
 {\displaystyle \Delta \phi =\frac{\partial ^2 \phi }{\partial {x^2}} +\frac{\partial ^2 \phi }{\partial {y^2}} + \frac{\partial ^2 \phi }{\partial {z^2}} }= \nabla  \cdot  \nabla \phi = \nabla ^2 \phi
 $$
 

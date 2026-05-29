@@ -14,7 +14,8 @@ positive integers such that:
 - Ranked alphabet: A ranked alphabet $\\sigma$ is a map from a set of symbols to the set of natural numbers. $\\Sigma(a)$ is called the arity of $a$.
 - A $\\Sigma$-labeled ranked tree T is a dom($\\Sigma$)-labeled 
 tree such that:
-$$T(s) = a \Rightarrow \{i \\\:|\\\: s \\: i\\in dom(T)\\} = \\{1,..., \\Sigma(a)\\}$$
+$$T(s) = a \Rightarrow \{i \\\:|\\\: s \\: i\\in dom(T)\\} = \\{1,..., \\Sigma(a)\\}{% raw %}
+$$
 （つまり、ノード$a$はちょうど$\\Sigma(a)$個の子どもを持つ)
 - expression of tree:
 ```
@@ -29,7 +30,8 @@ c     b
 This tree can be expressed as $a \\: c \\:(b \\: c)$
 ## HORS
 * 型:
-$$\\kappa ::= o \text{ (木の型) }| \\: \\kappa_{1} \\rightarrow \\kappa_{2} \text{ (関数型) }$$
+$$
+{% endraw %}\\kappa ::= o \text{ (木の型) }| \\: \\kappa_{1} \\rightarrow \\kappa_{2} \text{ (関数型) }$$
 * 型のオーダーとarity
     - order $(o) = 0$
     - order $(\\kappa_{1} \\rightarrow \\kappa_{2}) = \\text{max}(\\text{order}(\\kappa_{1})+1, \\text{order}(\\kappa_{2}))$ (つまり、 order $(\\kappa_{1} \\rightarrow \\dots \\rightarrow \\kappa_{n} \\rightarrow o)$=1+max(order(\\kappa1),..., order(\\kappan)) )
