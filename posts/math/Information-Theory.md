@@ -6,7 +6,8 @@ title: "Fundamentals of Information Theory"
 
 ## Alphabet and Encoding
 For data in any language, there are fundamental units that compose it. For example, in English, lowercase letters (or uppercase letters) such as $a,b,c,\dots$ are basic units; in Japanese, hiragana, katakana, and kanji are basic units. In computers, what is commonly used is the ASCII code, which adds various control symbols to English letters. Let such a set of symbols be represented by
-$$A=\{a_{1},a_{2},\dots,a_{\alpha}\}{% raw %}
+$$A=\{a_{1},a_{2},\dots,a_{\alpha}\}
+{% raw %}
 $$
 Then we can call the set $A$ an alphabet. An alphabet is a set; we do not call each individual element in $A$ an alphabet. The elements of alphabet $A$ are called symbols, and the total number of symbols in $A$, $\alpha = |A|$, is called the size of the alphabet.
 Examples of alphabets include $\{\text{White},\text{ black}\}, \{\text{True}, \text{ False}\}, \{W, E, N, S\}$. However, for example, $\{White,black\}$ and $\{True, False\}$ are both essentially the same in the sense that they are alphabets of size 2; what differs is only their interpretation. 

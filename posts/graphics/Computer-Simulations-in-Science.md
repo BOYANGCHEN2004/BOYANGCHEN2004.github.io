@@ -11,7 +11,8 @@ title: "Computer Simulations in Science"
         - コモディティ: Unbuffered
 
 * 性能パラメータ: "B/F値" Byte/Flop
-$$\frac{\text{メモリバンド幅(Bytes/s)}}{\text{浮動小数演算能力(Flops/s)}}{% raw %}
+$$\frac{\text{メモリバンド幅(Bytes/s)}}{\text{浮動小数演算能力(Flops/s)}}
+{% raw %}
 $$
 ### Poisson's Equation
 The following equation is called Poisson's equation:

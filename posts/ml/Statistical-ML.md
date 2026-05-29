@@ -50,20 +50,23 @@ $$
 
 ### Gaussian function:
 In mathematics, a Gaussian function, often simply referred to as a Gaussian, is a function of the base form
-$$f(x) = a \\ \: \text{exp}\left(-\frac{(x-b)^2}{2c^2}\right){% raw %}
+$$f(x) = a \\ \: \text{exp}\left(-\frac{(x-b)^2}{2c^2}\right)
+{% raw %}
 $$
 where $a$ is the height of the curve's peak, $b$ is is the horizontal position of the center of the peak, and $c$ (the standard deviation, sometimes called the Gaussian RMS width) controls the width of the "bell".
 When we set $a = \frac{1}{\sqrt{2\pi}\sigma}$ and $b = \mu$,  the Gaussian function becomes a probability density function of the normal distribution with mean $\mu$ and standard deviation $\sigma$, which is given by
 $$
 {% endraw %}
 
-f(x) = \frac{1}{\sqrt{2\pi}\sigma} \\ \: \text{exp}\left(-\frac{(x-\mu)^2}{2\sigma^2}\right){% raw %}
+f(x) = \frac{1}{\sqrt{2\pi}\sigma} \\ \: \text{exp}\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
+{% raw %}
 $$
 and the multivariate Gaussian distribution is given by
 $$
 {% endraw %}
 
-f(x) = \frac{1}{(2\pi)^{d/2} |\Sigma|^{1/2}} \\ \: \text{exp}\left(-\frac{1}{2}(x-\mu)^T \Sigma^{-1} (x-\mu)\right){% raw %}
+f(x) = \frac{1}{(2\pi)^{d/2} |\Sigma|^{1/2}} \\ \: \text{exp}\left(-\frac{1}{2}(x-\mu)^T \Sigma^{-1} (x-\mu)\right)
+{% raw %}
 $$
 where $\Sigma$ is the covariance matrix of the distribution.
 ## Kullback-Leibler (KL) Divergence

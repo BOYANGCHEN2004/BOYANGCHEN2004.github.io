@@ -5,7 +5,8 @@ title: "Quantum Mechanics"
 # Quantum Mechanics
 
 ## Schrödinger Equation
-$$i \hbar \frac{\partial \psi(\mathbf{r},t)}{\partial t} = \hat{H} \psi(\mathbf{r},t), \text{ where } \hbar = \frac{h}{2\pi},\: \hat{H} = -\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r}){% raw %}
+$$i \hbar \frac{\partial \psi(\mathbf{r},t)}{\partial t} = \hat{H} \psi(\mathbf{r},t), \text{ where } \hbar = \frac{h}{2\pi},\: \hat{H} = -\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r})
+{% raw %}
 $$
 The constant $\hbar$ is called reduced Planck constant.
 ## Hilbert Space
@@ -19,7 +20,8 @@ An example of an infinite-dimensional Hilbert space is $L^2$, the set of all fun
 $$
 {% endraw %}
 
-\langle f,g \rangle=\int_{-\infty}^{\infty}f(x)g(x)dx {% raw %}
+\langle f,g \rangle=\int_{-\infty}^{\infty}f(x)g(x)dx 
+{% raw %}
 $$
 A Hilbert space is always a Banach space, but the converse need not hold.
 ## Projection Operators
