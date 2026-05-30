@@ -11,3 +11,4 @@ This page lists interactive programs and visualizers.
 
 - [Tree Playground](/programs/report1-tree/)
 - [Computer Graphics](/programs/computer_graphic/)
+- [Chemistry Quiz](/programs/chemistry_quiz/)
