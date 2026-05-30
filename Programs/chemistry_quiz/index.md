@@ -434,51 +434,61 @@ classes: wide
           prompt: '1. What is the atomic number of an element?',
           options: ['The number of neutrons', 'The number of protons', 'The number of electrons plus neutrons', 'The mass number minus the atomic mass'],
           answer: 1,
+          explanation: 'Atomic number equals the number of protons in the nucleus; it uniquely identifies an element.',
         },
         {
           prompt: '2. Which element is a noble gas?',
           options: ['Chlorine', 'Neon', 'Sodium', 'Fluorine'],
           answer: 1,
+          explanation: 'Noble gases occupy Group 18 and are inert; Neon (Ne) is one of them.',
         },
         {
           prompt: '3. Which group in the periodic table contains the halogens?',
           options: ['Group 1', 'Group 2', 'Group 17', 'Group 18'],
           answer: 2,
+          explanation: 'Halogens are in Group 17 (formerly Group VIIA) and include F, Cl, Br, I.',
         },
         {
           prompt: '4. Which compound is most likely ionic?',
           options: ['H2O', 'CO2', 'NaCl', 'CH4'],
           answer: 2,
+          explanation: 'NaCl is formed from a metal (Na) and a nonmetal (Cl) and typically forms ionic bonds.',
         },
         {
           prompt: '5. What is the pH of pure water at 25 C?',
           options: ['0', '3', '7', '14'],
           answer: 2,
+          explanation: 'Pure water is neutral at 25°C with pH 7 (equal H+ and OH- concentrations).',
         },
         {
           prompt: '6. Which element has the highest electronegativity?',
           options: ['Sodium', 'Oxygen', 'Fluorine', 'Carbon'],
           answer: 2,
+          explanation: 'Fluorine is the most electronegative element, attracting electrons strongly in bonds.',
         },
         {
           prompt: '7. Which is a chemical change?',
           options: ['Melting ice', 'Boiling water', 'Rusting iron', 'Cutting paper'],
           answer: 2,
+          explanation: 'Rusting iron involves formation of new compounds (oxides) — a chemical change; melting/boiling are physical.',
         },
         {
           prompt: '8. The formula H2O2 is for which substance?',
           options: ['Hydrogen peroxide', 'Hydrogen hydroxide', 'Water', 'Ozone'],
           answer: 0,
+          explanation: 'H2O2 is hydrogen peroxide (one extra oxygen compared to water, H2O).',
         },
         {
           prompt: '9. What is the electron configuration of sodium (Na)?',
           options: ['2, 8', '2, 8, 1', '2, 7, 2', '1, 8, 2'],
           answer: 1,
+          explanation: 'Sodium has 11 electrons: distribution is 2 in first shell, 8 in second, 1 in third (2,8,1).',
         },
         {
           prompt: '10. A covalent bond is formed when atoms',
           options: ['transfer electrons', 'share electrons', 'exchange neutrons', 'lose protons'],
           answer: 1,
+          explanation: 'Covalent bonds involve sharing electron pairs between atoms (typical between nonmetals).',
         },
       ],
     },
@@ -490,51 +500,61 @@ classes: wide
           prompt: '1. One mole of a substance contains approximately',
           options: ['6.02 x 10^23 particles', '3.00 x 10^8 particles', '1.00 x 10^2 particles', '9.81 x 10^1 particles'],
           answer: 0,
+          explanation: 'Avogadro\'s number (~6.02×10^23) is the number of particles in one mole of substance.',
         },
         {
           prompt: '2. What is the molar mass of carbon dioxide (CO2)?',
           options: ['28 g/mol', '32 g/mol', '44 g/mol', '48 g/mol'],
           answer: 2,
+          explanation: 'CO2 has one C (12 g/mol) and two O (2×16 g/mol) → 12 + 32 = 44 g/mol.',
         },
         {
           prompt: '3. If temperature is constant and volume decreases, gas pressure usually',
           options: ['decreases', 'stays the same', 'increases', 'becomes zero'],
           answer: 2,
+          explanation: "Boyle's law: at constant temperature, pressure and volume are inversely related, so decreasing volume raises pressure.",
         },
         {
           prompt: '4. Which equation is used for dilution problems?',
           options: ['PV = nRT', 'M1V1 = M2V2', 'F = ma', 'E = mc^2'],
           answer: 1,
+          explanation: 'Dilution conserves moles of solute: M1V1 = M2V2 relates initial and final concentrations and volumes.',
         },
         {
           prompt: '5. An exothermic reaction',
           options: ['absorbs heat', 'releases heat', 'creates mass', 'stops at equilibrium'],
           answer: 1,
+          explanation: 'Exothermic reactions release heat to the surroundings (temperature of surroundings rises).',
         },
         {
           prompt: '6. A solution concentration in mol/L is called',
           options: ['density', 'molarity', 'normality', 'solubility'],
           answer: 1,
+          explanation: 'Molarity (M) is moles of solute per liter of solution (mol/L).',
         },
         {
           prompt: '7. Which statement best describes a saturated solution?',
           options: ['It contains no solute', 'It can dissolve more solute at the same temperature', 'It contains the maximum dissolved solute at that temperature', 'It is always a gas'],
           answer: 2,
+          explanation: 'A saturated solution holds the maximum amount of dissolved solute at that temperature; adding more causes precipitation.',
         },
         {
           prompt: '8. Which factor generally increases the solubility of most solid solutes in water?',
           options: ['Lowering temperature', 'Raising temperature', 'Reducing the amount of solvent to zero', 'Reducing pressure dramatically'],
           answer: 1,
+          explanation: 'For many solids, solubility in water increases with temperature (though there are exceptions).',
         },
         {
           prompt: '9. What does the ideal gas law relate?',
           options: ['Force, mass, and acceleration', 'Pressure, volume, temperature, and amount of gas', 'Heat, work, and entropy only', 'Density, viscosity, and flow rate'],
           answer: 1,
+          explanation: 'PV = nRT links pressure (P), volume (V), temperature (T), and amount in moles (n) for ideal gases.',
         },
         {
           prompt: '10. An endothermic process',
           options: ['releases heat to the surroundings', 'absorbs heat from the surroundings', 'has no energy change', 'must always be spontaneous'],
           answer: 1,
+          explanation: 'Endothermic processes absorb heat from their surroundings (e.g., ice melting absorbs heat).',
         },
       ],
     },
@@ -546,51 +566,61 @@ classes: wide
           prompt: '1. A strong acid example is',
           options: ['HCl', 'NaOH', 'NaCl', 'CH4'],
           answer: 0,
+          explanation: 'Hydrochloric acid (HCl) is a common strong acid that fully dissociates in water.',
         },
         {
           prompt: '2. An acid turns blue litmus paper',
           options: ['red', 'green', 'white', 'black'],
           answer: 0,
+          explanation: 'Acids turn blue litmus paper red due to increased H+ concentration.',
         },
         {
           prompt: '3. A base turns red litmus paper',
           options: ['red', 'blue', 'yellow', 'orange'],
           answer: 1,
+          explanation: 'Bases turn red litmus paper blue because they produce OH- which changes the indicator.',
         },
         {
           prompt: '4. Oxidation means',
           options: ['gain of electrons', 'loss of electrons', 'gain of protons', 'loss of neutrons'],
           answer: 1,
+          explanation: 'Oxidation is loss of electrons; reduction is gain of electrons (OIL RIG mnemonic).',
         },
         {
           prompt: '5. Reduction means',
           options: ['gain of electrons', 'loss of electrons', 'gain of heat', 'loss of mass'],
           answer: 0,
+          explanation: 'Reduction is gain of electrons; in redox pairs one species is oxidized and the other reduced.',
         },
         {
           prompt: '6. A catalyst',
           options: ['raises activation energy', 'lowers activation energy', 'changes the equilibrium constant', 'is consumed permanently'],
           answer: 1,
+          explanation: 'A catalyst lowers the activation energy and speeds up both forward and reverse reactions without being consumed.',
         },
         {
           prompt: '7. At chemical equilibrium, the system is',
           options: ['completely stopped', 'dynamic, with forward and reverse reactions continuing', 'always pure product', 'always pure reactant'],
           answer: 1,
+          explanation: 'Equilibrium is dynamic: forward and reverse rates are equal, so concentrations stay constant.',
         },
         {
           prompt: '8. If pressure increases for a gas equilibrium, the system usually shifts toward',
           options: ['the side with more gas molecules', 'the side with fewer gas molecules', 'the side with more liquid', 'no shift ever occurs'],
           answer: 1,
+          explanation: "Le Châtelier's principle: increasing pressure favors the side with fewer gas molecules to reduce pressure.",
         },
         {
           prompt: '9. A buffer solution is used to',
           options: ['increase temperature quickly', 'resist changes in pH', 'make a solution pure', 'force complete precipitation'],
           answer: 1,
+          explanation: 'A buffer resists pH changes by neutralizing added acid or base (contains a weak acid/base and its conjugate).',
         },
         {
           prompt: '10. In the reaction Zn + Cu2+ -> Zn2+ + Cu, zinc is the',
           options: ['oxidizing agent', 'reducing agent', 'catalyst', 'neutral salt'],
           answer: 1,
+          explanation: 'Zinc loses electrons (Zn → Zn2+) so it is oxidized and thus acts as the reducing agent for Cu2+.',
         },
       ],
     },
@@ -686,6 +716,7 @@ classes: wide
         correct,
         selectedText: selected === null ? 'No answer selected' : question.options[selected],
         correctText: question.options[question.answer],
+        explanation: question.explanation || '',
       };
     });
     return { score, review };
@@ -768,6 +799,7 @@ classes: wide
             <p class="chem-review__question">${index + 1}. ${item.question}</p>
             <p class="chem-review__line"><strong>Your answer:</strong> ${item.selectedText}</p>
             <p class="chem-review__line"><strong>Correct answer:</strong> ${item.correctText}</p>
+            ${!item.correct && item.explanation ? `<p class="chem-review__line"><strong>Explanation:</strong> ${item.explanation}</p>` : ''}
           </article>
         `).join('')}
       </div>
