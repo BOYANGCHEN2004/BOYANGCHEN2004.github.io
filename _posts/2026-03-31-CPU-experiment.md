@@ -8,8 +8,9 @@ tags:
   - category2
 ---
 
-# CPU実験振り返り
+このブログは東京大学理学部情報科学科3年Aセメスターの名物(?)授業ーCPU実験をFPU・メモリ係視点で振り返ったブログです。
 
+## 参考資料
 レポートとソースコード一式は[このレポジトリ](https://github.com/BOYANGCHENutokyo/FPU_MEMORY.git)にあります。
 同じ班のコア係のCPU実験振り返りブログは[ここ](https://sqrt10.net/blogs/wdnnv10zsr4xgt8orej864qf)です。合わせて読むと、全体の流れがよりわかりやすいかもしれません。
 
