@@ -4,4 +4,6 @@ title: "Computer Graphics"
 
 # Computer Graphics
 
-## Raster and Vector
+## Modeling
+
+### Subdivision Surface

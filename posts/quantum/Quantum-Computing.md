@@ -6,17 +6,19 @@ title: "Quantum Computing"
 
 ## Basic gates:
 
-{% raw %}
 $$
 \begin{aligned}
 X &= \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} \quad , \quad Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix} \quad , \quad Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} \quad , \quad H = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 & 1 \\ 1 & -1 \end{pmatrix} \quad , \\
 P(\theta) &= \begin{pmatrix} 1 & 0 \\ 0 & e^{i\theta} \end{pmatrix} \quad \\
 Rx(\theta) &= \text{exp}\left(-i\frac{\theta}{2} \sigma_x\right) = \begin{pmatrix} \cos(\theta/2) & -i\sin(\theta/2) \\ -i\sin(\theta/2) & \cos(\theta/2) \end{pmatrix} \quad \\
 Ry(\theta) &= \text{exp}\left(-i\frac{\theta}{2} \sigma_y\right) = \begin{pmatrix} \cos(\theta/2) & -\sin(\theta/2) \\ \sin(\theta/2) & \cos(\theta/2) \end{pmatrix} \quad \\
-Rz(\phi) &= \text{exp}\left(-i\frac{\phi}{2} \sigma_z\right) = \begin{pmatrix} e^{-i\phi/2} & 0 \\ 0 & e^{i\phi/2} \end{pmatrix}
+Rz(\phi) &= \text{exp}\left(-i\frac{\phi}{2} \sigma_z\right) = \begin{pmatrix} e^{-i\phi/2} & 0 \\ 0 & e^{i\phi/2} \end{pmatrix} \\
+S &= \sqrt{Z} = \begin{pmatrix} 
+    1 & 0 \\
+    0 & i
+\end{pmatrix}
 \end{aligned}
 $$
-{% endraw %}
 
 ## Basic States
 - Bell State: $\frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)$

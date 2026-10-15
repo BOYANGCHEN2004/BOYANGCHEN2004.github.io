@@ -5,8 +5,8 @@ title: "Quantum Mechanics"
 # Quantum Mechanics
 
 ## Schrödinger Equation
-$$i \hbar \frac{\partial \psi(\mathbf{r},t)}{\partial t} = \hat{H} \psi(\mathbf{r},t), \text{ where } \hbar = \frac{h}{2\pi},\: \hat{H} = -\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r})
-{% raw %}
+$$
+i \hbar \frac{\partial \psi(\mathbf{r},t)}{\partial t} = \hat{H} \psi(\mathbf{r},t), \text{ where } \hbar = \frac{h}{2\pi},\: \hat{H} = -\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r})
 $$
 The constant $\hbar$ is called reduced Planck constant.
 ## Hilbert Space

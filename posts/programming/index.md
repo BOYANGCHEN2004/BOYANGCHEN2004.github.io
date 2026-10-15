@@ -8,7 +8,7 @@ title: Programming
 {% assign items = site.pages | where_exp: "p", "p.path contains 'posts/programming/'" %}
 <ul>
 {% for p in items %}
-  {% unless p.url == page.url %}
+  {% unless p.url == page.url or p.path contains '形式言語review.md' %}
     <li><a href="{{ p.url }}">{{ p.title }}</a></li>
   {% endunless %}
 {% endfor %}
